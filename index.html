@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Venture Arc</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0B1A2B;
+font-family:'Inter',sans-serif;
+background:#071a2c;
 color:white;
 }
 
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:25px 10%;
-font-size:18px;
+background:#071a2c;
+position:sticky;
+top:0;
+z-index:10;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
+margin-left:30px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.logo{
+font-weight:600;
+font-size:18px;
 }
 
 .hero{
-height:80vh;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -38,95 +60,151 @@ padding:0 20px;
 }
 
 .hero h1{
-font-size:56px;
-max-width:800px;
-margin-bottom:20px;
+font-size:64px;
+max-width:850px;
+line-height:1.2;
 }
 
 .hero p{
-font-size:20px;
+margin-top:20px;
 max-width:650px;
-color:#cbd5e1;
+color:#b7c5d3;
+font-size:18px;
 }
 
-button{
-margin-top:30px;
-padding:14px 28px;
-font-size:16px;
-border:none;
+.button{
+margin-top:35px;
+background:#d4af37;
+padding:14px 30px;
 border-radius:6px;
-background:#D4AF37;
 color:black;
-cursor:pointer;
+text-decoration:none;
+font-weight:600;
 }
 
 section{
-padding:100px 12%;
+padding:120px 12%;
 }
 
 .section-title{
-font-size:40px;
+font-size:42px;
 margin-bottom:20px;
 }
 
 .cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.card{
+background:#0f2a44;
+padding:30px;
+border-radius:12px;
+transition:all .3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:#133556;
+}
+
+.card h3{
+margin-top:0;
+}
+
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+margin-top:40px;
+}
+
+.service-box{
+background:#0f2a44;
+padding:40px;
+border-radius:12px;
+}
+
+.service-box h3{
+margin-top:0;
+}
+
+ul{
+padding-left:18px;
+line-height:1.8;
+}
+
+.insights{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 margin-top:40px;
 }
 
-.card{
-background:#12263f;
+.article{
+background:#0f2a44;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 }
 
 footer{
-padding:60px 10%;
 text-align:center;
-color:#94a3b8;
+padding:80px 20px;
+color:#93a7bb;
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:44px;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<div><strong>Venture Arc</strong></div>
+
+<div class="logo">Venture Arc</div>
 
 <div>
-<a href="#">Model</a>
-<a href="#">Services</a>
-<a href="#">Insights</a>
-<a href="#">Founder</a>
-<a href="#">Contact</a>
+<a href="#model">Model</a>
+<a href="#services">Services</a>
+<a href="#insights">Insights</a>
+<a href="#founder">Founder</a>
 </div>
+
 </nav>
 
 
-<div class="hero">
+<section class="hero">
 
 <h1>Powerful Narratives for Ambitious Founders</h1>
 
 <p>
-Venture Arc helps founders transform early signals into compelling ventures through disciplined thinking and strategic narrative design.
+Venture Arc helps founders transform early signals into compelling ventures through disciplined thinking, structured hypotheses and powerful narrative design.
 </p>
 
-<button>Explore The Venture Arc Model</button>
+<a href="#model" class="button">Explore The Venture Arc Model</a>
 
-</div>
+</section>
 
 
-<section>
+
+<section id="model">
 
 <h2 class="section-title">The Venture Arc Model</h2>
 
-<p>
-The Venture Arc Model helps founders transform early signals into structured ventures with clarity, evidence and narrative power.
-</p>
+<p>The Venture Arc Model helps founders transform early signals into structured ventures with clarity, evidence and narrative power.</p>
 
 <div class="cards">
 
@@ -160,24 +238,97 @@ The Venture Arc Model helps founders transform early signals into structured ven
 </section>
 
 
-<section>
 
-<h2 class="section-title">Behind Venture Arc</h2>
+<section id="services">
+
+<h2 class="section-title">Where Venture Arc Intervenes</h2>
+
+<div class="services">
+
+<div class="service-box">
+
+<h3>Venture Validation Lab</h3>
+
+<ul>
+<li>Opportunity exploration</li>
+<li>Idea validation</li>
+<li>Market signal analysis</li>
+<li>Problem framing</li>
+<li>Hypothesis development</li>
+</ul>
+
+</div>
+
+<div class="service-box">
+
+<h3>Venture Narrative Studio</h3>
+
+<ul>
+<li>Brand story development</li>
+<li>Investor narratives</li>
+<li>Pitch deck creation</li>
+<li>Strategic positioning</li>
+<li>Founder storytelling</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="founder">
+
+<h2 class="section-title">The Mind Behind Venture Arc</h2>
 
 <p>
-Venture Arc was created by <strong>Anveyshika Misra</strong>, a strategy-minded thinker fascinated by how ideas evolve into ventures.
+
+Venture Arc was founded by <strong>Anveyshika Misra</strong>, a strategy-minded thinker fascinated by how ideas evolve into ventures.
+
 </p>
 
 <p>
-The Venture Arc Model reflects the belief that strong ventures are not accidental — they are designed through clarity of thought, structured hypotheses and compelling narrative.
+
+The Venture Arc Model reflects a simple belief: strong ventures are not accidental — they are designed through clarity of thought, disciplined hypotheses and compelling narrative.
+
 </p>
 
 </section>
 
 
+
+<section id="insights">
+
+<h2 class="section-title">Insights</h2>
+
+<div class="insights">
+
+<div class="article">
+<h3>Why Most Startup Ideas Fail Before They Start</h3>
+<p>Understanding the difference between ideas and real venture opportunities.</p>
+</div>
+
+<div class="article">
+<h3>The Anatomy of a Venture Narrative</h3>
+<p>Why the way you explain a venture determines whether others believe in it.</p>
+</div>
+
+<div class="article">
+<h3>From Signal to Startup</h3>
+<p>How early signals evolve into meaningful venture opportunities.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
 <footer>
 
-<p>Venture Arc — A venture strategy studio founded by Anveyshika Misra</p>
+Venture Arc — A Venture Strategy Studio Founded by Anveyshika Misra
 
 </footer>
 
