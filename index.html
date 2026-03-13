@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -18,80 +17,12 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 
 font-family:'Inter',sans-serif;
+background:#061524;
 color:white;
-background:#051321;
 overflow-x:hidden;
-
-}
-
-/* Animated background grid */
-
-body::before{
-
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-background-image:
-linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-
-background-size:60px 60px;
-z-index:-1;
-
-}
-
-/* NAVBAR */
-
-nav{
-
-position:sticky;
-top:0;
-z-index:1000;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:25px 10%;
-
-background:rgba(6,20,34,0.7);
-backdrop-filter:blur(8px);
-
-}
-
-.logo{
-
-font-size:20px;
-font-weight:600;
-letter-spacing:1px;
-
-}
-
-nav a{
-
-text-decoration:none;
-color:white;
-margin-left:30px;
-opacity:.8;
-transition:.3s;
-
-}
-
-nav a:hover{
-
-opacity:1;
-color:#d4af37;
 
 }
 
@@ -99,137 +30,146 @@ color:#d4af37;
 
 .hero{
 
-height:90vh;
+height:100vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-
 padding:0 20px;
+
+background:
+radial-gradient(circle at 50% 20%, rgba(212,175,55,0.15), transparent 40%),
+#061524;
 
 }
 
 .hero h1{
 
-font-size:78px;
+font-size:72px;
 max-width:900px;
-line-height:1.15;
+line-height:1.1;
 
 }
 
 .hero p{
 
-margin-top:25px;
+margin-top:20px;
 max-width:650px;
-color:#9fb5c9;
-font-size:18px;
+color:#9fb4c9;
 
 }
 
-.button{
+.cta{
 
-margin-top:40px;
+margin-top:35px;
 background:#d4af37;
-color:black;
-padding:16px 40px;
+padding:16px 36px;
 border-radius:8px;
 font-weight:600;
+color:black;
 text-decoration:none;
 
-transition:.3s;
+}
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+top:0;
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:24px 10%;
+
+background:rgba(6,20,34,0.7);
+backdrop-filter:blur(8px);
 
 }
 
-.button:hover{
+nav a{
 
-transform:translateY(-4px);
-box-shadow:0 15px 40px rgba(0,0,0,.5);
+color:white;
+text-decoration:none;
+margin-left:30px;
+opacity:.8;
 
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 
-padding:140px 12%;
+padding:120px 12%;
 
 }
 
-.section-title{
+/* FRAMEWORK DIAGRAM */
 
-font-size:48px;
-margin-bottom:20px;
-
-}
-
-/* MODEL FLOW */
-
-.flow{
+.framework{
 
 display:flex;
-flex-wrap:wrap;
-gap:20px;
-margin-top:60px;
-
+justify-content:space-between;
 align-items:center;
+margin-top:60px;
+flex-wrap:wrap;
 
 }
 
-.step{
+.node{
 
-padding:16px 28px;
-border-radius:8px;
-
-background:rgba(255,255,255,0.05);
-
-transition:.3s;
-
-}
-
-.step:hover{
-
-background:rgba(255,255,255,0.12);
+background:#0e2539;
+padding:25px 35px;
+border-radius:10px;
+transition:.4s;
+cursor:pointer;
+text-align:center;
+min-width:180px;
 
 }
 
-.arrow{
+.node:hover{
 
-color:#d4af37;
-font-size:22px;
+transform:translateY(-10px) scale(1.05);
+background:#163a58;
 
 }
 
-/* MODEL CARDS */
+.line{
 
-.cards{
+width:80px;
+height:2px;
+background:#d4af37;
+
+}
+
+/* CARDS */
+
+.grid{
 
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
 gap:30px;
-
 margin-top:60px;
 
 }
 
 .card{
 
-background:rgba(255,255,255,0.04);
-
-padding:32px;
-
-border-radius:14px;
-
-transition:.3s;
+background:#0e2539;
+padding:35px;
+border-radius:12px;
+transition:.4s;
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
-background:rgba(255,255,255,0.1);
+transform:translateY(-8px);
 
 }
 
@@ -238,26 +178,21 @@ background:rgba(255,255,255,0.1);
 .services{
 
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:40px;
-
-margin-top:50px;
+margin-top:60px;
 
 }
 
-.service-box{
+.service{
 
-background:rgba(255,255,255,0.05);
-
+background:#0e2539;
 padding:40px;
-
-border-radius:14px;
+border-radius:12px;
 
 }
 
-.service-box ul{
+.service ul{
 
 margin-top:15px;
 line-height:1.9;
@@ -269,34 +204,9 @@ line-height:1.9;
 .insights{
 
 display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
-
 margin-top:50px;
-
-}
-
-.article{
-
-background:rgba(255,255,255,0.04);
-
-padding:30px;
-
-border-radius:14px;
-
-transition:.3s;
-
-cursor:pointer;
-
-}
-
-.article:hover{
-
-transform:translateY(-10px);
-
-background:rgba(255,255,255,0.1);
 
 }
 
@@ -305,62 +215,47 @@ background:rgba(255,255,255,0.1);
 .founder{
 
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 gap:60px;
-
 align-items:center;
 
 }
 
-.founder-text{
+.founder p{
 
+color:#9fb4c9;
 line-height:1.8;
-color:#b6c9db;
 
 }
 
 /* CTA */
 
-.cta{
+.cta-section{
 
-margin-top:100px;
-
+margin-top:120px;
 padding:70px;
-
 border-radius:16px;
-
-background:linear-gradient(
-135deg,
-rgba(255,255,255,0.08),
-rgba(255,255,255,0.02)
-);
-
+background:linear-gradient(135deg,#0e2539,#102e47);
 text-align:center;
 
 }
 
-.cta h2{
+.cta-section h2{
 
 font-size:42px;
 
 }
 
-.cta p{
+.cta-button{
 
-margin-top:10px;
-color:#9fb5c9;
-
-}
-
-/* FOOTER */
-
-footer{
-
-text-align:center;
-padding:80px;
-color:#7d97ad;
+margin-top:25px;
+display:inline-block;
+background:#d4af37;
+padding:16px 40px;
+border-radius:8px;
+font-weight:600;
+color:black;
+text-decoration:none;
 
 }
 
@@ -369,33 +264,24 @@ color:#7d97ad;
 @media(max-width:900px){
 
 .hero h1{
-
 font-size:46px;
+}
 
+.framework{
+flex-direction:column;
+gap:20px;
+}
+
+.line{
+display:none;
 }
 
 .services{
-
 grid-template-columns:1fr;
-
 }
 
 .founder{
-
 grid-template-columns:1fr;
-
-}
-
-.flow{
-
-flex-direction:column;
-
-}
-
-.arrow{
-
-display:none;
-
 }
 
 }
@@ -404,25 +290,20 @@ display:none;
 
 </head>
 
-
 <body>
-
 
 <nav>
 
-<div class="logo">Venture Arc</div>
+<div>Venture Arc</div>
 
 <div>
-
 <a href="#model">Venture Arc Model</a>
 <a href="#services">Services</a>
 <a href="#insights">Insights</a>
 <a href="#founder">Founder</a>
-
 </div>
 
 </nav>
-
 
 
 <section class="hero">
@@ -430,76 +311,64 @@ display:none;
 <h1>Powerful Narratives for Ambitious Founders</h1>
 
 <p>
-
-Venture Arc helps founders transform early signals into compelling ventures through disciplined thinking, structured hypotheses and strategic narrative design.
-
+Venture Arc helps founders transform early signals into compelling ventures through disciplined thinking and strategic narrative design.
 </p>
 
-<a class="button" href="#model">Explore The Venture Arc Model</a>
+<a class="cta" href="#model">Explore The Venture Arc Model</a>
 
 </section>
-
 
 
 <section id="model">
 
-<h2 class="section-title">The Venture Arc Model</h2>
+<h2>The Venture Arc Model</h2>
 
 <p>A strategic framework that transforms early signals into credible ventures.</p>
 
-<div class="flow">
+<div class="framework">
 
-<div class="step">Signal Recognition</div>
-<div class="arrow">→</div>
+<div class="node">Signal Recognition</div>
+<div class="line"></div>
 
-<div class="step">Problem Framing</div>
-<div class="arrow">→</div>
+<div class="node">Problem Framing</div>
+<div class="line"></div>
 
-<div class="step">Venture Hypothesis</div>
-<div class="arrow">→</div>
+<div class="node">Venture Hypothesis</div>
+<div class="line"></div>
 
-<div class="step">Evidence Development</div>
-<div class="arrow">→</div>
+<div class="node">Evidence Development</div>
+<div class="line"></div>
 
-<div class="step">Venture Narrative</div>
+<div class="node">Venture Narrative</div>
 
 </div>
 
-<div class="cards">
+
+<div class="grid">
 
 <div class="card">
-
 <h3>Signal Recognition</h3>
 <p>Identify emerging signals that reveal meaningful opportunities.</p>
-
 </div>
 
 <div class="card">
-
 <h3>Problem Framing</h3>
 <p>Define the right problem with precision and strategic insight.</p>
-
 </div>
 
 <div class="card">
-
 <h3>Venture Hypothesis</h3>
 <p>Structure the venture as a clear hypothesis about how value will be created.</p>
-
 </div>
 
 <div class="card">
-
 <h3>Evidence Development</h3>
 <p>Build confidence through research and validation.</p>
-
 </div>
 
 <div class="card">
-
 <h3>Venture Narrative</h3>
 <p>Craft a compelling narrative that communicates the venture's potential.</p>
-
 </div>
 
 </div>
@@ -507,14 +376,13 @@ Venture Arc helps founders transform early signals into compelling ventures thro
 </section>
 
 
-
 <section id="services">
 
-<h2 class="section-title">Where Venture Arc Intervenes</h2>
+<h2>Where Venture Arc Intervenes</h2>
 
 <div class="services">
 
-<div class="service-box">
+<div class="service">
 
 <h3>Venture Validation Lab</h3>
 
@@ -530,7 +398,7 @@ Venture Arc helps founders transform early signals into compelling ventures thro
 
 </div>
 
-<div class="service-box">
+<div class="service">
 
 <h3>Venture Narrative Studio</h3>
 
@@ -551,14 +419,13 @@ Venture Arc helps founders transform early signals into compelling ventures thro
 </section>
 
 
-
 <section id="insights">
 
-<h2 class="section-title">Insights</h2>
+<h2>Insights</h2>
 
 <div class="insights">
 
-<div class="article">
+<div class="card">
 
 <h3>Why Most Startup Ideas Fail Before They Start</h3>
 
@@ -566,7 +433,7 @@ Venture Arc helps founders transform early signals into compelling ventures thro
 
 </div>
 
-<div class="article">
+<div class="card">
 
 <h3>The Anatomy of a Venture Narrative</h3>
 
@@ -574,7 +441,7 @@ Venture Arc helps founders transform early signals into compelling ventures thro
 
 </div>
 
-<div class="article">
+<div class="card">
 
 <h3>From Signal to Startup</h3>
 
@@ -587,16 +454,13 @@ Venture Arc helps founders transform early signals into compelling ventures thro
 </section>
 
 
-
 <section id="founder">
 
 <div class="founder">
 
 <div>
 
-<h2 class="section-title">The Architect of Venture Arc</h2>
-
-<div class="founder-text">
+<h2>The Architect of Venture Arc</h2>
 
 <p>
 
@@ -606,13 +470,7 @@ Venture Arc was created by <strong>Anveyshika Misra</strong> — a strategy-driv
 
 <p>
 
-Through research, consulting experience and deep curiosity about entrepreneurship, she developed the Venture Arc Model.
-
-</p>
-
-<p>
-
-Her work focuses on bridging the gap between intuition and strategy — helping founders move from vague ideas to credible ventures backed by clarity, evidence and narrative power.
+Through research, consulting experience and deep curiosity about entrepreneurship, she developed the Venture Arc Model — a structured framework helping founders transform early signals into disciplined ventures.
 
 </p>
 
@@ -620,29 +478,18 @@ Her work focuses on bridging the gap between intuition and strategy — helping 
 
 </div>
 
-</div>
-
-<div class="cta">
+<div class="cta-section">
 
 <h2>Work With Venture Arc</h2>
 
 <p>For founders building thoughtful ventures.</p>
 
-<a class="button">Request Consultation</a>
+<a class="cta-button">Request Consultation</a>
 
 </div>
 
 </section>
 
 
-
-<footer>
-
-Venture Arc — A Venture Strategy Studio Founded by Anveyshika Misra
-
-</footer>
-
-
 </body>
-
 </html>
