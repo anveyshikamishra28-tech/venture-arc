@@ -19,7 +19,7 @@ scroll-behavior:smooth;
 body{
 margin:0;
 font-family:'Inter',sans-serif;
-background:#071a2c;
+background:#061827;
 color:white;
 }
 
@@ -28,27 +28,26 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:25px 10%;
-background:#071a2c;
 position:sticky;
 top:0;
+background:#061827;
 z-index:10;
-}
-
-.logo{
-font-weight:600;
-font-size:18px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:28px;
+margin-left:30px;
 font-weight:500;
-transition:.3s;
 }
 
 nav a:hover{
 color:#d4af37;
+}
+
+.logo{
+font-weight:600;
+font-size:18px;
 }
 
 .hero{
@@ -63,21 +62,21 @@ padding:0 20px;
 
 .hero h1{
 font-size:64px;
-max-width:850px;
+max-width:900px;
 line-height:1.2;
 }
 
 .hero p{
 margin-top:20px;
-max-width:650px;
-color:#b7c5d3;
+max-width:700px;
+color:#b8c6d6;
 font-size:18px;
 }
 
 .button{
 margin-top:35px;
 background:#d4af37;
-padding:14px 32px;
+padding:14px 30px;
 border-radius:6px;
 color:black;
 text-decoration:none;
@@ -87,7 +86,6 @@ transition:.3s;
 
 .button:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 section{
@@ -107,70 +105,37 @@ margin-top:40px;
 }
 
 .card{
-background:#0f2a44;
+background:#0d2b47;
 padding:30px;
 border-radius:12px;
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-background:#133556;
-box-shadow:0 12px 35px rgba(0,0,0,0.4);
-}
-
-.flow{
-
-margin-top:60px;
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-align-items:center;
-justify-content:center;
-
-}
-
-.step{
-
-background:#0f2a44;
-padding:20px 30px;
-border-radius:8px;
-font-weight:500;
-
-}
-
-.arrow{
-font-size:22px;
-color:#d4af37;
+transform:translateY(-10px);
+background:#123a5e;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
 }
 
 .services{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:40px;
-margin-top:50px;
+margin-top:40px;
 }
 
 .service-box{
-background:#0f2a44;
+background:#0d2b47;
 padding:40px;
 border-radius:12px;
 }
 
 .service-box ul{
-padding-left:18px;
-line-height:1.9;
-}
-
-.insights{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
+line-height:1.8;
 }
 
 .article{
-background:#0f2a44;
+background:#0d2b47;
 padding:30px;
 border-radius:12px;
 text-decoration:none;
@@ -180,38 +145,37 @@ transition:.3s;
 
 .article:hover{
 transform:translateY(-8px);
-background:#133556;
-box-shadow:0 12px 35px rgba(0,0,0,0.4);
+background:#123a5e;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
 }
 
-.founder-text{
-max-width:800px;
-line-height:1.8;
-color:#c7d4e0;
+.insights{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.contact{
+text-align:center;
+max-width:700px;
+margin:auto;
 }
 
 footer{
 text-align:center;
-padding:80px 20px;
-color:#8aa3ba;
+padding:60px;
+color:#8ea4b8;
 }
 
 @media(max-width:900px){
 
 .hero h1{
-font-size:44px;
+font-size:42px;
 }
 
 .services{
 grid-template-columns:1fr;
-}
-
-.flow{
-flex-direction:column;
-}
-
-.arrow{
-display:none;
 }
 
 }
@@ -222,20 +186,21 @@ display:none;
 
 <body>
 
-
 <nav>
 
 <div class="logo">Venture Arc</div>
 
 <div>
+
 <a href="#model">Venture Arc Model</a>
 <a href="#services">Services</a>
 <a href="#insights">Insights</a>
 <a href="#founder">Founder</a>
+<a href="#contact">Contact</a>
+
 </div>
 
 </nav>
-
 
 
 <section class="hero">
@@ -243,7 +208,9 @@ display:none;
 <h1>Powerful Narratives for Ambitious Founders</h1>
 
 <p>
-Venture Arc helps founders transform early signals into compelling ventures through disciplined thinking, structured hypotheses and strategic narrative design.
+
+Venture Arc helps founders transform early signals into compelling ventures through disciplined thinking, structured hypotheses and powerful narrative design.
+
 </p>
 
 <a href="#model" class="button">Explore The Venture Arc Model</a>
@@ -257,57 +224,65 @@ Venture Arc helps founders transform early signals into compelling ventures thro
 <h2 class="section-title">The Venture Arc Model</h2>
 
 <p>
+
 The Venture Arc Model helps founders transform early signals into structured ventures with clarity, evidence and narrative power.
+
 </p>
-
-<div class="flow">
-
-<div class="step">Signal Recognition</div>
-
-<div class="arrow">→</div>
-
-<div class="step">Problem Framing</div>
-
-<div class="arrow">→</div>
-
-<div class="step">Venture Hypothesis</div>
-
-<div class="arrow">→</div>
-
-<div class="step">Evidence Development</div>
-
-<div class="arrow">→</div>
-
-<div class="step">Venture Narrative</div>
-
-</div>
-
 
 <div class="cards">
 
 <div class="card">
+
 <h3>Signal Recognition</h3>
-<p>Identify emerging signals that reveal meaningful opportunities.</p>
+
+<p>
+Identify emerging signals that reveal meaningful opportunities.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Problem Framing</h3>
-<p>Define the right problem with precision and strategic insight.</p>
+
+<p>
+Define the right problem with precision and strategic insight.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Venture Hypothesis</h3>
-<p>Structure the venture as a clear hypothesis about how value will be created.</p>
+
+<p>
+Structure the venture as a clear hypothesis about how value will be created.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Evidence Development</h3>
-<p>Build confidence in the opportunity through research and validation.</p>
+
+<p>
+Build confidence in the opportunity through research and validation.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Venture Narrative</h3>
-<p>Craft a compelling narrative that communicates the venture's potential.</p>
+
+<p>
+Craft a compelling narrative that communicates the venture's potential.
+</p>
+
 </div>
 
 </div>
@@ -327,70 +302,33 @@ The Venture Arc Model helps founders transform early signals into structured ven
 <h3>Venture Validation Lab</h3>
 
 <ul>
+
 <li>Opportunity exploration</li>
 <li>Idea validation</li>
 <li>Market signal analysis</li>
 <li>Problem framing</li>
 <li>Hypothesis development</li>
+
 </ul>
 
 </div>
+
 
 <div class="service-box">
 
 <h3>Venture Narrative Studio</h3>
 
 <ul>
+
 <li>Brand story development</li>
 <li>Investor narratives</li>
 <li>Pitch deck creation</li>
 <li>Strategic positioning</li>
 <li>Founder storytelling</li>
+
 </ul>
 
 </div>
-
-</div>
-
-</section>
-
-
-
-<section id="insights">
-
-<h2 class="section-title">Insights</h2>
-
-<div class="insights">
-
-<a class="article" href="#">
-
-<h3>Why Most Startup Ideas Fail Before They Start</h3>
-
-<p>
-Understanding the difference between ideas and real venture opportunities.
-</p>
-
-</a>
-
-<a class="article" href="#">
-
-<h3>The Anatomy of a Venture Narrative</h3>
-
-<p>
-Why the way you explain a venture determines whether others believe in it.
-</p>
-
-</a>
-
-<a class="article" href="#">
-
-<h3>From Signal to Startup</h3>
-
-<p>
-How early signals evolve into meaningful venture opportunities.
-</p>
-
-</a>
 
 </div>
 
@@ -401,8 +339,6 @@ How early signals evolve into meaningful venture opportunities.
 <section id="founder">
 
 <h2 class="section-title">The Architect of Venture Arc</h2>
-
-<div class="founder-text">
 
 <p>
 
@@ -422,10 +358,82 @@ Her work focuses on bridging the gap between intuition and strategy — helping 
 
 </p>
 
+</section>
+
+
+
+<section id="insights">
+
+<h2 class="section-title">Insights</h2>
+
+<div class="insights">
+
+
+<a class="article" href="#">
+
+<h3>Why Most Startup Ideas Fail Before They Start</h3>
+
+<p>
+Understanding the difference between ideas and real venture opportunities.
+</p>
+
+</a>
+
+
+<a class="article" href="#">
+
+<h3>The Anatomy of a Venture Narrative</h3>
+
+<p>
+Why the way you explain a venture determines whether others believe in it.
+</p>
+
+</a>
+
+
+<a class="article" href="#">
+
+<h3>From Signal to Startup</h3>
+
+<p>
+How early signals evolve into meaningful venture opportunities.
+</p>
+
+</a>
+
 </div>
 
 </section>
 
+
+
+<section id="contact">
+
+<h2 class="section-title">Work With Venture Arc</h2>
+
+<div class="contact">
+
+<p>
+
+Venture Arc works with founders who want to transform early ideas into credible ventures through disciplined thinking and powerful narrative design.
+
+</p>
+
+<p>
+
+If you're building something ambitious, let's explore it together.
+
+</p>
+
+<a class="button" href="mailto:venturearc@proton.me">
+
+Request a Conversation
+
+</a>
+
+</div>
+
+</section>
 
 
 <footer>
@@ -436,4 +444,5 @@ Venture Arc — A Venture Strategy Studio Founded by Anveyshika Misra
 
 
 </body>
+
 </html>
